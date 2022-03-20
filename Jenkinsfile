@@ -30,7 +30,7 @@ pipeline{
                   sh 'docker build -t devopshint/my-app-1.0 .'
                 }
             }
-      
+    }
       stage('Deploy Docker Image') {
             steps {
                 script {
