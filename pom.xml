@@ -32,7 +32,7 @@
 <sonar.language>java</sonar.language>
 
 </properties>
-	<build>  
+	
     <plugins>  
         <plugin>  
             <!-- Build an executable JAR -->  
@@ -48,7 +48,7 @@
             </configuration>  
         </plugin>  
     </plugins>  
-</build>  
+ 
  <build>
 		<plugins>
 			<plugin>
