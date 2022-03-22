@@ -1,6 +1,11 @@
 pipeline{
   agent any
   
+  environment{
+    dockerImage=''
+    registry='jyothiswaroopreddy08/devopshint'
+  }
+  
   stages{
 //     stage('Checkout') {
 //       steps{
@@ -27,20 +32,20 @@ pipeline{
     stage('Build Docker Image') {
             steps {
                 script {
-                  sh 'docker build -t devopshint/my-app-1.0 .'
+                  dockerImage = docker.build registry
                 }
             }
     }
-      stage('Deploy Docker Image') {
-            steps {
-                script {
-                  withCredentials([string(credentialsId: 'jyothiswaroopreddy08', variable: 'dockerhubpwd')]) {
-                  sh 'docker login -u devopshint -p ${dockerhubpwd}'
-}
-                 sh 'docker push devopshint/my-app-1.0'
-                }
-            }
-        }
+//       stage('Deploy Docker Image') {
+//             steps {
+//                 script {
+//                   withCredentials([string(credentialsId: 'jyothiswaroopreddy08', variable: 'dockerhubpwd')]) {
+//                   sh 'docker login -u devopshint -p ${dockerhubpwd}'
+// }
+//                  sh 'docker push devopshint/my-app-1.0'
+//                 }
+//             }
+//         }
     
   }
 }
