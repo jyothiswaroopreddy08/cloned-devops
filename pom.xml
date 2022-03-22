@@ -43,7 +43,7 @@
             <configuration>  
                 <archive>  
                     <manifest>  
-                        <mainClass>com.pack.Addition.</mainClass>  
+                        <mainClass>com.pack.Addition</mainClass>  
                     </manifest>  
                 </archive>  
             </configuration>  
