@@ -46,6 +46,13 @@ pipeline{
             }
          }
       }
+    stage("Run Docker Container"){
+      steps{
+        script{
+          dockerImage=docker.run -d -p 8000:8080 registry
+        }
+      }
+    }
 
     
   }
