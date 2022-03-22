@@ -43,7 +43,7 @@
             <configuration>  
                 <archive>  
                     <manifest>  
-                        <mainClass>/devops-project/src/main/java/pack/Addition.java</mainClass>  
+                        <mainClass>/devops-project/src/main/java/pack/Addition</mainClass>  
                     </manifest>  
                 </archive>  
             </configuration>  
