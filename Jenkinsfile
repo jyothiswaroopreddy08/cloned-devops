@@ -4,6 +4,7 @@ pipeline{
   environment{
     dockerImage=''
     registry='jyothiswaroopreddy08/devopshint'
+    registryCredential='dockerhub_id'
   }
   
   stages{
@@ -36,6 +37,15 @@ pipeline{
                 }
             }
     }
+    stage('Deploy our image') {
+          steps{
+            script {
+                docker.withRegistry( '', registryCredential ) {
+                dockerImage.push()
+                }
+            }
+         }
+      }
 //       stage('Deploy Docker Image') {
 //             steps {
 //                 script {
