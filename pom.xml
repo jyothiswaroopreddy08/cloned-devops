@@ -32,9 +32,10 @@
 <sonar.language>java</sonar.language>
 
 </properties>
-	
-    <plugins>  
-        <plugin>  
+ 
+ <build>
+		<plugins>
+			<plugin>  
             <!-- Build an executable JAR -->  
             <groupId>org.apache.maven.plugins</groupId>  
             <artifactId>maven-jar-plugin</artifactId>  
@@ -46,12 +47,8 @@
                     </manifest>  
                 </archive>  
             </configuration>  
-        </plugin>  
-    </plugins>  
- 
- <build>
-		<plugins>
-			<plugin>
+       
+				
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>0.8.3</version>
